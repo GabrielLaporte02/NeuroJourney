@@ -25,6 +25,33 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Mapa.unity
     m_guid: 4098c2daac6de483a99c42b8e8be1acc
+  - m_enabled: 1
+    m_path: Assets/Scenes/PadariaAntes.unity
+    m_guid: 39b4485757fe340c0a9b0260e8d9e614
+  - m_enabled: 1
+    m_path: Assets/Scenes/PadariaDepois.unity
+    m_guid: 4a493bd0bf2e94169878acc53f51a2c7
+  - m_enabled: 1
+    m_path: Assets/Scenes/PlazaAntes.unity
+    m_guid: 171a1d2d2f99347dc8309b5af142b78b
+  - m_enabled: 1
+    m_path: Assets/Scenes/PlazaDepois.unity
+    m_guid: b82f7b6777c254249bfd9766a439f2fe
+  - m_enabled: 1
+    m_path: Assets/Scenes/ParqueAntes.unity
+    m_guid: 9613d578087e34fad9a1db4a74456437
+  - m_enabled: 1
+    m_path: Assets/Scenes/ParqueDepois.unity
+    m_guid: 74e4873d7f89b4ed8a40199599605a61
+  - m_enabled: 1
+    m_path: Assets/Scenes/CorreiosAntes.unity
+    m_guid: 0b5d3eae75e794c80abfde0c63232ef2
+  - m_enabled: 1
+    m_path: Assets/Scenes/CorreiosDepois.unity
+    m_guid: 3c6acb9585c82451aa1c4d6ba9f8ed4d
+  - m_enabled: 1
+    m_path: Assets/Scenes/Menu.unity
+    m_guid: 93bb34903dff840c0aafabcfd4ba2eec
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
