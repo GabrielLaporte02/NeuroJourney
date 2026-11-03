@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,28 +8,55 @@ public class CartaMemoria : MonoBehaviour
     public Image imagemVerso;
 
     private int id;
-    private JogoMemoria jogo;
+    private JogoMemoria jogoPadaria;
+    private JogoMemoriaCorreios jogoCorreios;
     private bool encontrada = false;
 
+    // Configuração para a padaria
     public void Configurar(
         int novoId,
         Sprite imagem,
         JogoMemoria gerenciador)
     {
         id = novoId;
-        jogo = gerenciador;
-
+        jogoPadaria = gerenciador;
+        jogoCorreios = null;
         imagemFrente.sprite = imagem;
         encontrada = false;
+        Esconder();
+    }
 
+    // Configuração para os correios
+    public void Configurar(
+        int novoId,
+        Sprite imagem,
+        JogoMemoriaCorreios gerenciador)
+    {
+        id = novoId;
+        jogoCorreios = gerenciador;
+        jogoPadaria = null;
+        imagemFrente.sprite = imagem;
+        encontrada = false;
         Esconder();
     }
 
     public void Clicar()
     {
-        if (!encontrada)
+        if (encontrada) return;
+
+        if (jogoPadaria != null)
         {
-            jogo.SelecionarCarta(this);
+            jogoPadaria.SelecionarCarta(this);
+        }
+        else if (jogoCorreios != null)
+        {
+            jogoCorreios.SelecionarCarta(this);
+        }
+        else
+        {
+            Debug.LogError(
+                "Carta sem gerenciador de memória!"
+            );
         }
     }
 
@@ -41,7 +69,6 @@ public class CartaMemoria : MonoBehaviour
     {
         imagemFrente.gameObject.SetActive(true);
         imagemVerso.enabled = false;
-             // imagemVerso.gameObject.SetActive(false);
     }
 
     public void Esconder()
@@ -50,7 +77,6 @@ public class CartaMemoria : MonoBehaviour
 
         imagemFrente.gameObject.SetActive(false);
         imagemVerso.enabled = true;
-        //imagemVerso.gameObject.SetActive(true);
     }
 
     public void MarcarEncontrada()
