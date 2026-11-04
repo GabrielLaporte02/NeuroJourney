@@ -8,8 +8,12 @@ public class CartaMemoria : MonoBehaviour
     public Image imagemVerso;
 
     private int id;
+
     private JogoMemoria jogoPadaria;
     private JogoMemoriaCorreios jogoCorreios;
+    private JogoMemoriaParque jogoParque;
+    private JogoMemoriaPlaza jogoPlaza;
+
     private bool encontrada = false;
 
     // Configuração para a padaria
@@ -21,6 +25,9 @@ public class CartaMemoria : MonoBehaviour
         id = novoId;
         jogoPadaria = gerenciador;
         jogoCorreios = null;
+        jogoParque = null;
+        jogoPlaza = null;
+
         imagemFrente.sprite = imagem;
         encontrada = false;
         Esconder();
@@ -35,6 +42,43 @@ public class CartaMemoria : MonoBehaviour
         id = novoId;
         jogoCorreios = gerenciador;
         jogoPadaria = null;
+        jogoParque = null;
+        jogoPlaza = null;
+
+        imagemFrente.sprite = imagem;
+        encontrada = false;
+        Esconder();
+    }
+
+    // Configuração para o parque da Luna
+    public void Configurar(
+        int novoId,
+        Sprite imagem,
+        JogoMemoriaParque gerenciador)
+    {
+        id = novoId;
+        jogoParque = gerenciador;
+        jogoPadaria = null;
+        jogoCorreios = null;
+        jogoPlaza = null;
+
+        imagemFrente.sprite = imagem;
+        encontrada = false;
+        Esconder();
+    }
+
+    // Configuração para a Plaza do Zeca
+    public void Configurar(
+        int novoId,
+        Sprite imagem,
+        JogoMemoriaPlaza gerenciador)
+    {
+        id = novoId;
+        jogoPlaza = gerenciador;
+        jogoPadaria = null;
+        jogoCorreios = null;
+        jogoParque = null;
+
         imagemFrente.sprite = imagem;
         encontrada = false;
         Esconder();
@@ -51,6 +95,14 @@ public class CartaMemoria : MonoBehaviour
         else if (jogoCorreios != null)
         {
             jogoCorreios.SelecionarCarta(this);
+        }
+        else if (jogoParque != null)
+        {
+            jogoParque.SelecionarCarta(this);
+        }
+        else if (jogoPlaza != null)
+        {
+            jogoPlaza.SelecionarCarta(this);
         }
         else
         {

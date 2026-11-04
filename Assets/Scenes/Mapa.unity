@@ -2352,6 +2352,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EstadoConstrucoes
   padariaA: {fileID: 1153073116}
   padariaD: {fileID: 1695369626}
+  correiosA: {fileID: 1872641478}
+  correiosD: {fileID: 1165336067}
+  parqueA: {fileID: 72779045}
+  parqueD: {fileID: 592314391}
+  plazaA: {fileID: 126528764}
+  plazaD: {fileID: 1089302018}
 --- !u!4 &1874193779
 Transform:
   m_ObjectHideFlags: 0

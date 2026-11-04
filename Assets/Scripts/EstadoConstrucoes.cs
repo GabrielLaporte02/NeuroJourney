@@ -11,6 +11,14 @@ public class EstadoConstrucoes : MonoBehaviour
     public GameObject correiosA;
     public GameObject correiosD;
 
+    [Header("Parque")]
+    public GameObject parqueA;
+    public GameObject parqueD;
+
+    [Header("Plaza")]
+    public GameObject plazaA;
+    public GameObject plazaD;
+
     void Start()
     {
         // PADARIA
@@ -26,5 +34,19 @@ public class EstadoConstrucoes : MonoBehaviour
 
         correiosA.SetActive(!correiosConcluido);
         correiosD.SetActive(correiosConcluido);
+
+        // PARQUE
+        bool parqueConcluido =
+            PlayerPrefs.GetInt("ParqueConcluido", 0) == 1;
+
+        parqueA.SetActive(!parqueConcluido);
+        parqueD.SetActive(parqueConcluido);
+
+        // PLAZA
+        bool plazaConcluida =
+            PlayerPrefs.GetInt("PlazaConcluida", 0) == 1;
+
+        plazaA.SetActive(!plazaConcluida);
+        plazaD.SetActive(plazaConcluida);
     }
 }

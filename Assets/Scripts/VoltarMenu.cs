@@ -8,6 +8,9 @@ public class VoltarMenu : MonoBehaviour
     {
          //PARA FIM DE TESTE RESETA O PROGRESSO QUANDO VOLTA AO MENU
         PlayerPrefs.DeleteKey("PadariaConcluida");
+        PlayerPrefs.DeleteKey("CorreiosConcluido");
+        PlayerPrefs.DeleteKey("ParqueConcluido");
+        PlayerPrefs.DeleteKey("PlazaConcluida");
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("Menu");

@@ -2147,7 +2147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1047350363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2645,8 +2645,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogoPadaria, Assembly-CSharp
+      - m_Target: {fileID: 1422528619}
+        m_TargetAssemblyTypeName: DialogoCorreiosAntes, Assembly-CSharp
         m_MethodName: EscolherEmocao
         m_Mode: 5
         m_Arguments:
@@ -3111,8 +3111,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogoPadaria, Assembly-CSharp
+      - m_Target: {fileID: 1422528619}
+        m_TargetAssemblyTypeName: DialogoCorreiosAntes, Assembly-CSharp
         m_MethodName: EscolherEmocao
         m_Mode: 5
         m_Arguments:
@@ -3343,7 +3343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoCorreiosAntes
   painelMemoria: {fileID: 1146153300}
-  jogoMemoria: {fileID: 0}
+  jogoMemoria: {fileID: 596777315}
   painelDialogo: {fileID: 1045136689}
   painelPergunta: {fileID: 1047350362}
   painelFeedback: {fileID: 911261518}
@@ -3670,8 +3670,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: JogoMemoria, Assembly-CSharp
+      - m_Target: {fileID: 596777315}
+        m_TargetAssemblyTypeName: JogoMemoriaCorreios, Assembly-CSharp
         m_MethodName: ContinuarDepoisDoPar
         m_Mode: 1
         m_Arguments:
@@ -3803,9 +3803,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogoPadaria, Assembly-CSharp
-        m_MethodName: ContinuarAposFeedback
+      - m_Target: {fileID: 1422528619}
+        m_TargetAssemblyTypeName: DialogoCorreiosAntes, Assembly-CSharp
+        m_MethodName: ProximaFala
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4152,8 +4152,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1422528619}
         m_TargetAssemblyTypeName: DialogoCorreiosAntes, Assembly-CSharp
-        m_MethodName: ProximaFala
-        m_Mode: 1
+        m_MethodName: EscolherEmocao
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4483,8 +4483,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogoPadaria, Assembly-CSharp
+      - m_Target: {fileID: 1422528619}
+        m_TargetAssemblyTypeName: DialogoCorreiosAntes, Assembly-CSharp
         m_MethodName: EscolherEmocao
         m_Mode: 5
         m_Arguments:
