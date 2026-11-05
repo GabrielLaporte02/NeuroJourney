@@ -42,7 +42,7 @@ GraphicsSettings:
   m_CacheMissCollectionPath: CacheMissCollection
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,
     type: 0}
-  m_CustomRenderPipeline: {fileID: 11400000, guid: 3c3b18e2e4e5c154aa60010361b2ca5a,
+  m_CustomRenderPipeline: {fileID: 11400000, guid: 252a9cc242e5a41c595c682cc69cd926,
     type: 2}
   m_TransparencySortMode: 3
   m_TransparencySortAxis: {x: 0, y: 1, z: 0}
@@ -64,7 +64,7 @@ GraphicsSettings:
   m_FogKeepExp2: 1
   m_AlbedoSwatchInfos: []
   m_RenderPipelineGlobalSettingsMap:
-    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: 7d811487904bf9048bc6c6acfb262cd5,
+    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: d6634be15bd944aedafc27db822c579c,
       type: 2}
   m_ShaderBuildSettings:
     keywordDeclarationOverrides: []
