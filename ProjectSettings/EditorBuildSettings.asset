@@ -17,6 +17,36 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_2DAdventureGame/Tutorial_Demo/Demo_Scenes/Final/SugarLand_Example_Scene.unity
     guid: a86a62f58fa7649af9958b6c53bc8d28
+  - enabled: 1
+    path: Assets/Scenes/PlazaDepois.unity
+    guid: b82f7b6777c254249bfd9766a439f2fe
+  - enabled: 1
+    path: Assets/Scenes/PlazaAntes.unity
+    guid: 171a1d2d2f99347dc8309b5af142b78b
+  - enabled: 1
+    path: Assets/Scenes/ParqueDepois.unity
+    guid: 74e4873d7f89b4ed8a40199599605a61
+  - enabled: 1
+    path: Assets/Scenes/ParqueAntes.unity
+    guid: 9613d578087e34fad9a1db4a74456437
+  - enabled: 1
+    path: Assets/Scenes/PadariaDepois.unity
+    guid: 4a493bd0bf2e94169878acc53f51a2c7
+  - enabled: 1
+    path: Assets/Scenes/PadariaAntes.unity
+    guid: 39b4485757fe340c0a9b0260e8d9e614
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 93bb34903dff840c0aafabcfd4ba2eec
+  - enabled: 1
+    path: Assets/Scenes/Mapa.unity
+    guid: 4098c2daac6de483a99c42b8e8be1acc
+  - enabled: 1
+    path: Assets/Scenes/CorreiosDepois.unity
+    guid: 3c6acb9585c82451aa1c4d6ba9f8ed4d
+  - enabled: 1
+    path: Assets/Scenes/CorreiosAntes.unity
+    guid: 0b5d3eae75e794c80abfde0c63232ef2
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f,
       type: 2}

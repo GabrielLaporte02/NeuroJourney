@@ -1,8 +1,0 @@
-.character-selector:hover {
-    scale: 1.15 1.15;
-}
-
-.character-selector {
-    transition-property: scale;
-    transition-duration: 1s;
-}
