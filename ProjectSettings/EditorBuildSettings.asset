@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_2DAdventureGame/Tutorial_Demo/Demo_Scenes/Final/SugarLand_Example_Scene.unity
     guid: a86a62f58fa7649af9958b6c53bc8d28
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 93bb34903dff840c0aafabcfd4ba2eec
+  - enabled: 1
     path: Assets/Scenes/PlazaDepois.unity
     guid: b82f7b6777c254249bfd9766a439f2fe
   - enabled: 1
@@ -35,9 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PadariaAntes.unity
     guid: 39b4485757fe340c0a9b0260e8d9e614
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 93bb34903dff840c0aafabcfd4ba2eec
   - enabled: 1
     path: Assets/Scenes/Mapa.unity
     guid: 4098c2daac6de483a99c42b8e8be1acc
