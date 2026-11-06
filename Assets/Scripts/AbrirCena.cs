@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class AbrirCena : MonoBehaviour
 {
@@ -8,6 +9,19 @@ public class AbrirCena : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // Ignora cliques sobre a interface
+        if (EventSystem.current != null &&
+            EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        // Evita duplicar o toque em dispositivos móveis
+        if (Input.touchCount > 0)
+        {
+            return;
+        }
+
         Abrir();
     }
 
@@ -17,7 +31,17 @@ public class AbrirCena : MonoBehaviour
         if (Input.touchCount > 0 &&
             Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Vector2 posicaoToque = Input.GetTouch(0).position;
+            Touch toque = Input.GetTouch(0);
+
+            // Ignora toques sobre botões da interface
+            if (EventSystem.current != null &&
+                EventSystem.current.IsPointerOverGameObject(
+                    toque.fingerId))
+            {
+                return;
+            }
+
+            Vector2 posicaoToque = toque.position;
 
             Vector3 posicaoMundo =
                 Camera.main.ScreenToWorldPoint(posicaoToque);

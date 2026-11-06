@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 733834655}
   - component: {fileID: 733834654}
   - component: {fileID: 733834656}
+  - component: {fileID: 733834657}
   m_Layer: 0
   m_Name: CasaTheo
   m_TagString: Untagged
@@ -1221,6 +1222,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 12.96, y: 11.6}
   m_EdgeRadius: 0
+--- !u!114 &733834657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733834653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed8da78ac0b2429ab9a247b830ba96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbrirCena
+  nomeDaCena: CasaTheo
 --- !u!1 &794335729
 GameObject:
   m_ObjectHideFlags: 0

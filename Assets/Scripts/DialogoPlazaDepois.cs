@@ -8,7 +8,11 @@ public class DialogoPlazaDepois : MonoBehaviour
     public TMP_Text nomePersonagem;
     public TMP_Text textoDialogo;
 
+    [Header("Conquista")]
+    public AnimacaoConquista animacaoConquista;
+
     private int falaAtual = 0;
+    private bool dialogoFinalizado = false;
 
     private string[] nomes = {
         "Zeca",
@@ -27,6 +31,7 @@ public class DialogoPlazaDepois : MonoBehaviour
     void Start()
     {
         falaAtual = 0;
+        dialogoFinalizado = false;
 
         painelDialogoFinal.SetActive(true);
         MostrarFala();
@@ -40,6 +45,8 @@ public class DialogoPlazaDepois : MonoBehaviour
 
     public void ProximaFala()
     {
+        if (dialogoFinalizado) return;
+
         falaAtual++;
 
         if (falaAtual < falas.Length)
@@ -48,11 +55,26 @@ public class DialogoPlazaDepois : MonoBehaviour
         }
         else
         {
+            dialogoFinalizado = true;
+
             // Marca a Plaza como restaurada
             PlayerPrefs.SetInt("PlazaConcluida", 1);
             PlayerPrefs.Save();
 
+            // Esconde o diálogo final
             painelDialogoFinal.SetActive(false);
+
+            // Mostra a conquista da figurinha
+            if (animacaoConquista != null)
+            {
+                animacaoConquista.MostrarConquista();
+            }
+            else
+            {
+                Debug.LogError(
+                    "AnimacaoConquista não configurada na Plaza!"
+                );
+            }
         }
     }
 }

@@ -13,6 +13,9 @@ public class VoltarMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("PlazaConcluida");
         PlayerPrefs.Save();
 
+        // Reseta todas as figurinhas do álbum
+        SistemaFigurinhas.Resetar();
+
         SceneManager.LoadScene("Menu");
     }
 }
