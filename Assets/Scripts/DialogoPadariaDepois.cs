@@ -8,7 +8,11 @@ public class DialogoPadariaDepois : MonoBehaviour
     public TMP_Text nomePersonagem;
     public TMP_Text textoDialogo;
 
+    [Header("Conquista")]
+    public AnimacaoConquista animacaoConquista;
+
     private int falaAtual = 0;
+    private bool dialogoFinalizado = false;
 
     private string[] nomes = {
         "Dona Biscoito",
@@ -38,6 +42,9 @@ public class DialogoPadariaDepois : MonoBehaviour
 
     public void ProximaFala()
     {
+        if (dialogoFinalizado)
+            return;
+
         falaAtual++;
 
         if (falaAtual < falas.Length)
@@ -46,11 +53,26 @@ public class DialogoPadariaDepois : MonoBehaviour
         }
         else
         {
+            dialogoFinalizado = true;
+
             // Marca a padaria como restaurada
             PlayerPrefs.SetInt("PadariaConcluida", 1);
             PlayerPrefs.Save();
 
+            // Esconde o diálogo
             painelDialogoFinal.SetActive(false);
+
+            // Mostra a conquista da figurinha
+            if (animacaoConquista != null)
+            {
+                animacaoConquista.MostrarConquista();
+            }
+            else
+            {
+                Debug.LogError(
+                    "AnimacaoConquista não configurada!"
+                );
+            }
         }
     }
 }
