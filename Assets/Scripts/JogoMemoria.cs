@@ -15,6 +15,7 @@ public class JogoMemoria : MonoBehaviour
 
     [Header("Interface")]
     public TMP_Text textoProgresso;
+    public ProgressoEstrelas progressoEstrelas;
     public GameObject painelMensagemPar;
     public TMP_Text textoMensagemPar;
 
@@ -133,8 +134,6 @@ public class JogoMemoria : MonoBehaviour
 
             textoMensagemPar.text = mensagens[id];
             painelMensagemPar.SetActive(true);
-
-            // Espera o jogador clicar em Continuar
         }
         else
         {
@@ -166,18 +165,14 @@ public class JogoMemoria : MonoBehaviour
 
     void AtualizarProgresso()
     {
-        textoProgresso.text =
-            "Pares encontrados: " +
-            paresEncontrados + "/5";
+        if (progressoEstrelas != null)
+        {
+            progressoEstrelas.Atualizar(paresEncontrados);
+        }
     }
 
     void FinalizarJogo()
     {
         SceneManager.LoadScene("PadariaDepois");
     }
-
-    // void Start()
-    // {
-    //     IniciarJogo();
-    // }
 }
