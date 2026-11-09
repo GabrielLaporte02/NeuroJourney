@@ -13,7 +13,7 @@ public class JogoMemoriaCorreios : MonoBehaviour
     public Sprite[] imagensPares;
 
     [Header("Interface")]
-    public TMP_Text textoProgresso;
+    public ProgressoEstrelas progressoEstrelas;
     public GameObject painelMensagemPar;
     public TMP_Text textoMensagemPar;
 
@@ -45,14 +45,13 @@ public class JogoMemoriaCorreios : MonoBehaviour
         bloqueado = false;
 
         painelMensagemPar.SetActive(false);
+        AtualizarProgresso();
 
-        // Apaga cartas de uma partida anterior
         foreach (Transform filho in gradeCartas)
         {
             Destroy(filho.gameObject);
         }
 
-        // Dois exemplares de cada par
         List<int> ids = new List<int>();
 
         for (int i = 0; i < 5; i++)
@@ -61,7 +60,6 @@ public class JogoMemoriaCorreios : MonoBehaviour
             ids.Add(i);
         }
 
-        // Embaralhamento Fisher-Yates
         for (int i = ids.Count - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
@@ -71,7 +69,6 @@ public class JogoMemoriaCorreios : MonoBehaviour
             ids[j] = temp;
         }
 
-        // Cria as dez cartas
         foreach (int id in ids)
         {
             GameObject objeto = Instantiate(
@@ -88,8 +85,6 @@ public class JogoMemoriaCorreios : MonoBehaviour
                 this
             );
         }
-
-        AtualizarProgresso();
     }
 
     public void SelecionarCarta(CartaMemoria carta)
@@ -159,9 +154,10 @@ public class JogoMemoriaCorreios : MonoBehaviour
 
     void AtualizarProgresso()
     {
-        textoProgresso.text =
-            "Pares encontrados: " +
-            paresEncontrados + "/5";
+        if (progressoEstrelas != null)
+        {
+            progressoEstrelas.Atualizar(paresEncontrados);
+        }
     }
 
     void FinalizarJogo()
