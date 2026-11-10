@@ -8,6 +8,7 @@ public class GerenciadorAlbum : MonoBehaviour
     public GameObject figurinhaCapitao;
     public GameObject figurinhaLuna;
     public GameObject figurinhaZeca;
+    public GameObject figurinhaHeroi;
 
     void OnEnable()
     {
@@ -30,6 +31,10 @@ public class GerenciadorAlbum : MonoBehaviour
 
         figurinhaZeca.SetActive(
             SistemaFigurinhas.EstaDesbloqueada("Zeca")
+        );
+
+        figurinhaHeroi.SetActive(
+            SistemaFigurinhas.EstaDesbloqueada("HeroiVizinhanca")
         );
     }
 }

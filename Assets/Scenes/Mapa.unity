@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 72779046}
   - component: {fileID: 72779049}
   - component: {fileID: 72779048}
+  - component: {fileID: 72779050}
   m_Layer: 0
   m_Name: ParqueA
   m_TagString: Untagged
@@ -410,6 +411,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbrirCena
   nomeDaCena: ParqueAntes
+--- !u!114 &72779050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72779045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a40a2ce33217449e8e5db7e80730a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraConstrucao
+  corAura: {r: 0.7019608, g: 0.53333336, b: 1, a: 1}
+  intensidade: 0.5
+  espessura: 0.5
+  velocidade: 1.5
+  materialAura: {fileID: 2100000, guid: 382c3e85d247e4fe6bef662a2a7c1798, type: 2}
 --- !u!1 &98666497
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +629,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3625222820116344074, guid: 5dfd84ba1ac9745bcba14e7ed4e44796,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -648,6 +666,7 @@ GameObject:
   - component: {fileID: 126528765}
   - component: {fileID: 126528767}
   - component: {fileID: 126528768}
+  - component: {fileID: 126528769}
   m_Layer: 0
   m_Name: PlazaA
   m_TagString: Untagged
@@ -790,6 +809,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 13.74, y: 11.45}
   m_EdgeRadius: 0
+--- !u!114 &126528769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126528764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a40a2ce33217449e8e5db7e80730a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraConstrucao
+  corAura: {r: 0.39607844, g: 0.8392157, b: 0.5411765, a: 1}
+  intensidade: 0.5
+  espessura: 0.5
+  velocidade: 1.5
+  materialAura: {fileID: 2100000, guid: 382c3e85d247e4fe6bef662a2a7c1798, type: 2}
 --- !u!1 &463923217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1129,7 @@ GameObject:
   - component: {fileID: 733834654}
   - component: {fileID: 733834656}
   - component: {fileID: 733834657}
+  - component: {fileID: 733834658}
   m_Layer: 0
   m_Name: CasaTheo
   m_TagString: Untagged
@@ -1235,6 +1272,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbrirCena
   nomeDaCena: CasaTheo
+--- !u!114 &733834658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733834653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a40a2ce33217449e8e5db7e80730a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraConstrucao
+  corAura: {r: 1, g: 0.5882353, b: 0.23921569, a: 1}
+  intensidade: 0.5
+  espessura: 0.5
+  velocidade: 1.5
+  materialAura: {fileID: 2100000, guid: 382c3e85d247e4fe6bef662a2a7c1798, type: 2}
 --- !u!1 &794335729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1695,7 @@ GameObject:
   - component: {fileID: 1153073119}
   - component: {fileID: 1153073118}
   - component: {fileID: 1153073117}
+  - component: {fileID: 1153073121}
   m_Layer: 0
   m_Name: PadariaA
   m_TagString: Untagged
@@ -1783,6 +1838,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153073121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153073116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a40a2ce33217449e8e5db7e80730a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraConstrucao
+  corAura: {r: 1, g: 0.85, b: 0.35, a: 1}
+  intensidade: 0.5
+  espessura: 0.5
+  velocidade: 1.5
+  materialAura: {fileID: 2100000, guid: 382c3e85d247e4fe6bef662a2a7c1798, type: 2}
 --- !u!1 &1165336067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,6 +2265,7 @@ GameObject:
   - component: {fileID: 1872641479}
   - component: {fileID: 1872641482}
   - component: {fileID: 1872641481}
+  - component: {fileID: 1872641483}
   m_Layer: 0
   m_Name: CorreiosA
   m_TagString: Untagged
@@ -2335,6 +2408,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 13.52, y: 11.45}
   m_EdgeRadius: 0
+--- !u!114 &1872641483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872641478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a40a2ce33217449e8e5db7e80730a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AuraConstrucao
+  corAura: {r: 0.3019608, g: 0.6509804, b: 1, a: 1}
+  intensidade: 0.5
+  espessura: 0.5
+  velocidade: 1.5
+  materialAura: {fileID: 2100000, guid: 382c3e85d247e4fe6bef662a2a7c1798, type: 2}
 --- !u!1 &1874193777
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class JogoMemoriaPlaza : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class JogoMemoriaPlaza : MonoBehaviour
     public Sprite[] imagensPares;
 
     [Header("Interface")]
-    public TMP_Text textoProgresso;
+    public ProgressoEstrelas progressoEstrelas;
     public GameObject painelMensagemPar;
     public TMP_Text textoMensagemPar;
 
@@ -49,6 +48,8 @@ public class JogoMemoriaPlaza : MonoBehaviour
         bloqueado = false;
 
         painelMensagemPar.SetActive(false);
+
+        AtualizarProgresso();
 
         // Apaga cartas de uma partida anterior
         foreach (Transform filho in gradeCartas)
@@ -92,8 +93,6 @@ public class JogoMemoriaPlaza : MonoBehaviour
                 this
             );
         }
-
-        AtualizarProgresso();
     }
 
     public void SelecionarCarta(CartaMemoria carta)
@@ -133,8 +132,6 @@ public class JogoMemoriaPlaza : MonoBehaviour
 
             textoMensagemPar.text = mensagens[id];
             painelMensagemPar.SetActive(true);
-
-            // Espera o jogador clicar em Continuar
         }
         else
         {
@@ -166,19 +163,14 @@ public class JogoMemoriaPlaza : MonoBehaviour
 
     void AtualizarProgresso()
     {
-        textoProgresso.text =
-            "Pares encontrados: " +
-            paresEncontrados + "/5";
+        if (progressoEstrelas != null)
+        {
+            progressoEstrelas.Atualizar(paresEncontrados);
+        }
     }
 
     void FinalizarJogo()
     {
         SceneManager.LoadScene("PlazaDepois");
     }
-
-    // Para testes, se quiser iniciar diretamente:
-    // void Start()
-    // {
-    //     IniciarJogo();
-    // }
 }
