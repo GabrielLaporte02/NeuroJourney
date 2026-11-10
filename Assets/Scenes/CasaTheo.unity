@@ -2359,11 +2359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2129662791}
+      objectReference: {fileID: 2089412701}
     - target: {fileID: 8373344003139423575, guid: 8a962901a28474ee0918e35d14a18826,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: FecharConquista
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2382,18 +2382,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2129662788}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129662791}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1 &2129662791 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5948874218084308015, guid: 8a962901a28474ee0918e35d14a18826,
-    type: 3}
-  m_PrefabInstance: {fileID: 2129662788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129662792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7172615753900621318, guid: 8a962901a28474ee0918e35d14a18826,
