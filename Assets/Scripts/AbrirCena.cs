@@ -2,74 +2,66 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class AbrirCena : MonoBehaviour
 {
     [SerializeField] private string nomeDaCena;
 
+    private bool ClicouNaInterface(Vector2 posicao)
+    {
+        if (EventSystem.current == null)
+            return false;
+
+        PointerEventData dados = new PointerEventData(EventSystem.current);
+        dados.position = posicao;
+
+        List<RaycastResult> resultados = new List<RaycastResult>();
+
+        EventSystem.current.RaycastAll(dados, resultados);
+
+        return resultados.Count > 0;
+    }
+
     private void OnMouseDown()
     {
-        // Ignora cliques sobre a interface
-        if (EventSystem.current != null &&
-            EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
-        // Evita duplicar o toque em dispositivos móveis
         if (Input.touchCount > 0)
-        {
             return;
-        }
+
+        if (ClicouNaInterface(Input.mousePosition))
+            return;
 
         Abrir();
     }
 
     private void Update()
     {
-        // Detecta o toque no iPhone
-        if (Input.touchCount > 0 &&
-            Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount == 0)
+            return;
+
+        Touch toque = Input.GetTouch(0);
+
+        if (toque.phase != TouchPhase.Began)
+            return;
+
+        if (ClicouNaInterface(toque.position))
+            return;
+
+        Vector3 posicaoMundo =
+            Camera.main.ScreenToWorldPoint(toque.position);
+
+        RaycastHit2D hit =
+            Physics2D.Raycast(posicaoMundo, Vector2.zero);
+
+        if (hit.collider != null &&
+            hit.collider.gameObject == gameObject)
         {
-            Touch toque = Input.GetTouch(0);
-
-            // Ignora toques sobre botões da interface
-            if (EventSystem.current != null &&
-                EventSystem.current.IsPointerOverGameObject(
-                    toque.fingerId))
-            {
-                return;
-            }
-
-            Vector2 posicaoToque = toque.position;
-
-            Vector3 posicaoMundo =
-                Camera.main.ScreenToWorldPoint(posicaoToque);
-
-            RaycastHit2D hit =
-                Physics2D.Raycast(posicaoMundo, Vector2.zero);
-
-            if (hit.collider != null &&
-                hit.collider.gameObject == gameObject)
-            {
-                Abrir();
-            }
+            Abrir();
         }
     }
 
     private void Abrir()
-{
-    // if (GerenciadorTransicao.instancia != null)
-    // {
-    //     GerenciadorTransicao.instancia.MudarCena(nomeDaCena);
-    // }
-    // if (TransicaoNuvens.instancia != null)
-    // {
-    //     TransicaoNuvens.instancia.MudarCena(nomeDaCena);
-    // }
-    // else
-    // {
+    {
         SceneManager.LoadScene(nomeDaCena);
-    //}
-}
+    }
 }
