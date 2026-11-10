@@ -8,6 +8,7 @@ public class AbrirCena : MonoBehaviour
 {
     [SerializeField] private string nomeDaCena;
 
+    
     private bool ClicouNaInterface(Vector2 posicao)
     {
         if (EventSystem.current == null)
@@ -17,11 +18,19 @@ public class AbrirCena : MonoBehaviour
         dados.position = posicao;
 
         List<RaycastResult> resultados = new List<RaycastResult>();
-
         EventSystem.current.RaycastAll(dados, resultados);
 
-        return resultados.Count > 0;
+        foreach (RaycastResult resultado in resultados)
+        {
+            if (resultado.gameObject.GetComponentInParent<UnityEngine.UI.Button>() != null)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
+
 
     private void OnMouseDown()
     {
