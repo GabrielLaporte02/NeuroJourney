@@ -64,16 +64,19 @@ public class DialogoCorreiosDepois : MonoBehaviour
             // Esconde o diálogo
             painelDialogoFinal.SetActive(false);
 
-            // Mostra a conquista da figurinha
-            if (animacaoConquista != null)
+           // Mostra a conquista somente na primeira vez
+            if (!SistemaFigurinhas.EstaDesbloqueada("CapitaoBigode"))
             {
-                animacaoConquista.MostrarConquista();
-            }
-            else
-            {
-                Debug.LogError(
-                    "AnimacaoConquista não configurada nos Correios!"
-                );
+                if (animacaoConquista != null)
+                {
+                    animacaoConquista.MostrarConquista();
+                }
+                else
+                {
+                    Debug.LogError(
+                        "AnimacaoConquista não configurada nos Correios!"
+                    );
+                }
             }
         }
     }

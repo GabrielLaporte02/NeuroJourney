@@ -64,16 +64,19 @@ public class DialogoParqueDepois : MonoBehaviour
             // Esconde o diálogo final
             painelDialogoFinal.SetActive(false);
 
-            // Mostra a conquista da figurinha
-            if (animacaoConquista != null)
+            // Mostra a conquista somente na primeira vez
+            if (!SistemaFigurinhas.EstaDesbloqueada("Luna"))
             {
-                animacaoConquista.MostrarConquista();
-            }
-            else
-            {
-                Debug.LogError(
-                    "AnimacaoConquista não configurada no Parque!"
-                );
+                if (animacaoConquista != null)
+                {
+                    animacaoConquista.MostrarConquista();
+                }
+                else
+                {
+                    Debug.LogError(
+                        "AnimacaoConquista não configurada no Parque!"
+                    );
+                }
             }
         }
     }

@@ -22,7 +22,8 @@ public static class SistemaFigurinhas
             "DonaBiscoito",
             "CapitaoBigode",
             "Luna",
-            "Zeca"
+            "Zeca",
+            "HeroiVizinhanca"
         };
 
         foreach (string personagem in personagens)

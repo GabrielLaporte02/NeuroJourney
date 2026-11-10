@@ -63,15 +63,28 @@ public class DialogoPadariaDepois : MonoBehaviour
             painelDialogoFinal.SetActive(false);
 
             // Mostra a conquista da figurinha
-            if (animacaoConquista != null)
+            // if (animacaoConquista != null)
+            // {
+            //     animacaoConquista.MostrarConquista();
+            // }
+            // else
+            // {
+            //     Debug.LogError(
+            //         "AnimacaoConquista não configurada!"
+            //     );
+            // }
+            // Mostra a conquista somente na primeira vez
+            if (!SistemaFigurinhas.EstaDesbloqueada("DonaBiscoito"))
             {
-                animacaoConquista.MostrarConquista();
-            }
-            else
-            {
-                Debug.LogError(
-                    "AnimacaoConquista não configurada!"
-                );
+
+                if (animacaoConquista != null)
+                {
+                    animacaoConquista.MostrarConquista();
+                }
+                else
+                {
+                    Debug.LogError("AnimacaoConquista não configurada!");
+                }
             }
         }
     }

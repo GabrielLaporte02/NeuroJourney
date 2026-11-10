@@ -58,7 +58,18 @@ public class AbrirCena : MonoBehaviour
     }
 
     private void Abrir()
-    {
+{
+    // if (GerenciadorTransicao.instancia != null)
+    // {
+    //     GerenciadorTransicao.instancia.MudarCena(nomeDaCena);
+    // }
+    // if (TransicaoNuvens.instancia != null)
+    // {
+    //     TransicaoNuvens.instancia.MudarCena(nomeDaCena);
+    // }
+    // else
+    // {
         SceneManager.LoadScene(nomeDaCena);
-    }
+    //}
+}
 }

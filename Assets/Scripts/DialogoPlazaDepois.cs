@@ -64,16 +64,19 @@ public class DialogoPlazaDepois : MonoBehaviour
             // Esconde o diálogo final
             painelDialogoFinal.SetActive(false);
 
-            // Mostra a conquista da figurinha
-            if (animacaoConquista != null)
+            // Mostra a conquista somente na primeira vez
+            if (!SistemaFigurinhas.EstaDesbloqueada("Zeca"))
             {
-                animacaoConquista.MostrarConquista();
-            }
-            else
-            {
-                Debug.LogError(
-                    "AnimacaoConquista não configurada na Plaza!"
-                );
+                if (animacaoConquista != null)
+                {
+                    animacaoConquista.MostrarConquista();
+                }
+                else
+                {
+                    Debug.LogError(
+                        "AnimacaoConquista não configurada na Plaza!"
+                    );
+                }
             }
         }
     }
