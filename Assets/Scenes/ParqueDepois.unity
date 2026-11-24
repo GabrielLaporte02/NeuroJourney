@@ -163,14 +163,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202433415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -404,6 +404,8 @@ GameObject:
   - component: {fileID: 433198734}
   - component: {fileID: 433198733}
   - component: {fileID: 433198732}
+  - component: {fileID: 433198736}
+  - component: {fileID: 433198735}
   m_Layer: 5
   m_Name: BotaoVoltar
   m_TagString: Untagged
@@ -420,7 +422,7 @@ RectTransform:
   m_GameObject: {fileID: 433198730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 202433416}
@@ -429,7 +431,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 389, y: -115}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433198732
 MonoBehaviour:
@@ -487,6 +489,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 433198735}
+        m_TargetAssemblyTypeName: NavegacaoJogo, Assembly-CSharp
+        m_MethodName: VoltarMapa
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &433198733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,9 +521,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 6940264228283673154, guid: 7f1e12b5db3a6d7408907f2ed0fc1d89,
+    type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -525,6 +540,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433198730}
   m_CullTransparentMesh: 1
+--- !u!114 &433198735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433198730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5989aa8a4e0d724d966f3d440705340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavegacaoJogo
+  _cenaMenu: Menu
+  _cenaMapa: Mapa
+  _aoContinuar:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &433198736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433198730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2166a54354a35d54384b2515382075af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotaoAnimacaoClique
+  _escalaPressionado: 0.92
+  _duracao: 0.08
 --- !u!1 &446864025
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +669,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1298297287}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1298297288}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1072,6 +1118,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200017040}
   m_CullTransparentMesh: 1
+--- !u!1 &1215156712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215156714}
+  - component: {fileID: 1215156713}
+  m_Layer: 0
+  m_Name: MusicaDaCena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1215156713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215156712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c20694b856002c449bc98f4a853a08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicaDaCena
+  _musica: {fileID: 8300000, guid: 69c6a0e65c61f83478fadaa26ae9fde6, type: 3}
+  _volumeInicial: 0.561
+--- !u!4 &1215156714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215156712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283526748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1176,8 @@ GameObject:
   - component: {fileID: 1283526752}
   - component: {fileID: 1283526751}
   - component: {fileID: 1283526750}
+  - component: {fileID: 1283526754}
+  - component: {fileID: 1283526753}
   m_Layer: 5
   m_Name: BotaoContinuar
   m_TagString: Untagged
@@ -1100,7 +1194,7 @@ RectTransform:
   m_GameObject: {fileID: 1283526748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1734420952}
@@ -1109,7 +1203,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 978, y: -48}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283526750
 MonoBehaviour:
@@ -1167,6 +1261,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1283526753}
+        m_TargetAssemblyTypeName: NavegacaoJogo, Assembly-CSharp
+        m_MethodName: Continuar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1283526751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,9 +1293,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 5401214817162954362, guid: 81e5deff1c52e6842a73e26e9a672407,
+    type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1205,6 +1312,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283526748}
   m_CullTransparentMesh: 1
+--- !u!114 &1283526753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283526748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5989aa8a4e0d724d966f3d440705340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavegacaoJogo
+  _cenaMenu: Menu
+  _cenaMapa: Mapa
+  _aoContinuar:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1283526754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283526748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2166a54354a35d54384b2515382075af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotaoAnimacaoClique
+  _escalaPressionado: 0.92
+  _duracao: 0.08
 --- !u!1001 &1298297287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1213,6 +1351,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1685042847}
     m_Modifications:
+    - target: {fileID: 3854200217188701116, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854200217188701116, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4074775532517234214, guid: 8a962901a28474ee0918e35d14a18826,
         type: 3}
       propertyPath: m_Sprite
@@ -1223,6 +1371,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PainelConquista
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683988312853920892, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683988312853920892, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 123.07692
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683988312853920892, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683988312853920892, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683988312853920892, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8333805290111361205, guid: 8a962901a28474ee0918e35d14a18826,
         type: 3}
@@ -1334,11 +1507,51 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FecharConquista
       objectReference: {fileID: 0}
+    - target: {fileID: 9111584874384593733, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111584874384593733, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8366449596232858373, guid: f9db44047af5eba44b7e63ff9ca84310,
+        type: 3}
+    - target: {fileID: 9111584874384593733, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5948874218084308015, guid: 8a962901a28474ee0918e35d14a18826,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1298297289}
   m_SourcePrefab: {fileID: 100100000, guid: 8a962901a28474ee0918e35d14a18826, type: 3}
+--- !u!1 &1298297288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5948874218084308015, guid: 8a962901a28474ee0918e35d14a18826,
+    type: 3}
+  m_PrefabInstance: {fileID: 1298297287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298297289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298297288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2166a54354a35d54384b2515382075af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BotaoAnimacaoClique
+  _escalaPressionado: 0.92
+  _duracao: 0.08
 --- !u!1 &1323951788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,14 +2055,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734420951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2253,3 +2466,4 @@ SceneRoots:
   - {fileID: 639652734}
   - {fileID: 216253652}
   - {fileID: 1517241572}
+  - {fileID: 1215156714}

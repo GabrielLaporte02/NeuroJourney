@@ -16,6 +16,6 @@ public class VoltarMenu : MonoBehaviour
         // Reseta todas as figurinhas do álbum
         SistemaFigurinhas.Resetar();
 
-        SceneManager.LoadScene("Menu");
+        NavegacaoJogo.CarregarCena("Menu");
     }
 }

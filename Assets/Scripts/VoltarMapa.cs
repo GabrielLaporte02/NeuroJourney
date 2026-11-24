@@ -18,13 +18,6 @@ public class VoltarMapa : MonoBehaviour
 {
     public void Voltar()
     {
-        if (TransicaoNuvens.instancia != null)
-        {
-            TransicaoNuvens.instancia.MudarCena("Mapa");
-        }
-        else
-        {
-            SceneManager.LoadScene("Mapa");
-        }
+        NavegacaoJogo.CarregarCena("Mapa");
     }
 }
